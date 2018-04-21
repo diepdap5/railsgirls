@@ -1,4 +1,6 @@
-<%= form_with(model: comment, local: true) do |form| %>
+<%= form_for(@comment) do |f| %>
+<%= f.hidden_field :idea_id %>
+
   <% if comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
@@ -21,10 +23,6 @@
     <%= form.text_area :body %>
   </div>
 
-  <div class="field">
-    <%= form.label :idea_id %>
-    <%= form.number_field :idea_id %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
