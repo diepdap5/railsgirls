@@ -9,11 +9,12 @@ gem 'rails', '~> 5.2.0'
 group :development do
   gem 'sqlite3'
 end
-group :production do
-  gem 'pg'
-end
+gem 'activeadmin'
+gem 'inherited_resources'
+gem 'pg'
 gem 'devise'
 # Use Puma as the app server
+gem 'gravtastic'
 
 gem 'carrierwave'
 gem 'mini_magick', '3.8.0'

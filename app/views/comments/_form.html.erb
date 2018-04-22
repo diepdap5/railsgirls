@@ -22,9 +22,14 @@
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
-
+<div class="field">
+  <%= form.label :picture %><br>
+  <%= form.file_field :picture %>
+</div>
 
   <div class="actions">
     <%= form.submit %>
+    
   </div>
+  
 <% end %>
